@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark">
     <title>alpha clash practice</title>
     <!-- daisy ui and tailwind link === -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom css link here === -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -15,18 +15,79 @@
 
 <body>
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center ">
-        <section class="home text-white flex flex-col h-screen justify-center items-center gap-4">
+        <!-- home section  -->
+        <section id="home-screen" class=" text-white flex flex-col h-screen justify-center items-center gap-4 ">
             <h1 class="text-8xl poppins-regular uppercase">Alpha Clash Pro</h1>
             <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn bg-slate-50 text-black hover:bg-slate-500 hover:text-white">play Now</button>
+            <button onclick="play()"  class="btn bg-slate-50 text-black hover:bg-slate-500 hover:text-whiteg">play Now</button>
         </section>
-        <section class="playground">
-
+        <!-- playground section === -->
+        <section id="playground-screen" class="playground flex flex-col gap-6 items-center hidden">
+            <!-- screen  -->
+            <div class="flex items-center justify-center container artboard artboard-horizontal phone-6 border-[16px] rounded-lg border-[#010313CC] bg-[#FFFFFFB3]"><span class="font-semibold text-9xl text-black ">Y</span></div>
+        <!-- kbd ==-->
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                  </div>
+            </div>
+             <!-- kbd end == -->
+             <!-- life line  -->
+             <div class=" flex w-3/4 justify-between  ">
+                <button class="btn">
+                    Life:
+                    <img class="h-4 w-6" src="images/Group 23.png" alt="spark">
+                    <span class="text-xl">1</span>
+                  </button>
+                  <button class="btn">
+                    Score:
+                    <img class="size-4" src="images/monetization_on.png" alt="monit">
+                    <span class="text-xl">1</span>
+                  </button>
+             </div>
         </section>
-        <section class="score">
+<!-- score section  -->
+        <section class="score hidden">
+            <div class="flex justify-center items-center flex-col gap-3 min-h-screen">
+                <span class="text-6xl font-extrabold">Score : <span class="text-6xl font-bold" >14</span></span>
+                <button class="btn bg-white text-black hover:text-white">play again</button>
+                <p class="text-xl">Practice will make you Pro</p>
 
+            </div>
         </section>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-class.js"></script>
 </body>
 
 </html>
